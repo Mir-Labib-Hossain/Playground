@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div style={{ margin: "16px", position: "relative", height: "100vh" }}>
       <GridRuler spacing="sm" />
-      <Grid container spacing="sm" justifyContent="space-between" alignItems="center" style={{ height: "100%", border: "2px solid red" }}>
+      <Grid container spacing="sm" justifyContent="space-between" alignItems="center" style={{ height: "100%" }}>
         <Grid item xs={12} sm={6} md={4} lg={3}>
           <Box>Box - 1</Box>
         </Grid>
