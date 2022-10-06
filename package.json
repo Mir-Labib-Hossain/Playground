@@ -1,25 +1,35 @@
 {
   "name": "playground",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "dev":"webpack serve"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mir-Labib-Hossain/Playground.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mir-Labib-Hossain/Playground/issues"
+  },
+  "homepage": "https://github.com/Mir-Labib-Hossain/Playground#readme",
   "dependencies": {
-    "@types/classnames": "^2.3.1",
-    "classnames": "^2.3.2",
-    "node-sass": "^7.0.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "lodash": "^4.17.21",
+    "node-sass": "^7.0.3"
   },
   "devDependencies": {
-    "@types/react": "^18.0.17",
-    "@types/react-dom": "^18.0.6",
-    "@vitejs/plugin-react": "^2.1.0",
-    "typescript": "^4.6.4",
-    "vite": "^3.1.0"
+    "css-loader": "^6.7.1",
+    "sass-loader": "^13.0.2",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.74.0",
+    "webpack-bundle-analyzer": "^4.6.1",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
   }
 }
