@@ -25,7 +25,6 @@ type Props = {
 
 function Grid({ children, container, item, xs, sm, md, lg, spacing, justifyContent, alignItems, ...props }: Props & React.HTMLAttributes<HTMLDivElement>) {
     
-    
   const classNames = cn({
     [styles.grid_container]: container,
     [styles.grid_item]: item,
