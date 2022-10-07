@@ -1,7 +1,13 @@
+import Counter from "./components/counter";
+
 type Props = {};
 
 const App = (props: Props) => {
-  return <div>App</div>;
+  return (
+    <div>
+      <Counter />
+    </div>
+  );
 };
 
 export default App;
