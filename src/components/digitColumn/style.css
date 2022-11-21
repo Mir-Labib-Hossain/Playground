@@ -1,0 +1,50 @@
+.ticker-column-container {
+  position: relative;
+}
+
+.ticker-column {
+  position: absolute;
+  height: 1000%;
+  bottom: 0;
+}
+
+.ticker-digit {
+  height: 10%;
+}
+
+.number-placeholder {
+  visibility: hidden;
+}
+
+/* color animation */
+
+.increase{
+  animation: pulseGreen 500ms ease-in-out 1;
+}
+
+.decrease{
+  animation: pulseRed 500ms ease-in-out 1;
+}
+
+@keyframes pulseGreen{
+  0%{
+    color: white;
+  }
+  50%{
+    color: lightgreen;
+  }
+  100%{
+    color: white;
+  }
+}
+@keyframes pulseRed{
+  0%{
+    color: white;
+  }
+  50%{
+    color: tomato;
+  }
+  100%{
+    color: white;
+  }
+}

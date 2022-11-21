@@ -1,7 +1,34 @@
-type Props = {};
+import { useEffect, useState } from "react";
+import AnimateNumber from "./pages/animateNumber";
 
-const App = (props: Props) => {
-  return <div>App</div>;
+// src = https://www.youtube.com/watch?v=hn3wEsGLr_Q&t=75s&ab_channel=DarinDoria
+
+const App = () => {
+  const [randomStatus, setRandomStatus] = useState(false);
+  const [value, setValue] = useState(100);
+
+  const getRandom = () => {
+    return Math.random() * (100.55 - 120 + 1) + 100.55;
+  };
+
+  useEffect(() => {
+    if (randomStatus)
+      var clear = setInterval(() => {
+        setValue(getRandom());
+      }, 2000);
+    return () => {
+      clearTimeout(clear);
+    };
+  }, [randomStatus]);
+
+  return (
+    <>
+      <AnimateNumber value={value} />
+      <button onClick={() => setValue((prev) => prev + getRandom())}>+</button>
+      <button onClick={() => setValue((prev) => prev - getRandom())}>-</button>
+      <button onClick={() => setRandomStatus(!randomStatus)}>Random {randomStatus?"Off":"Start"}</button>
+    </>
+  );
 };
 
 export default App;

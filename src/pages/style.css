@@ -1,0 +1,11 @@
+.ticker-view {
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  overflow: hidden;
+  font-size: 56px;
+  position: relative;
+  background-color: black;
+  color: white;
+}
