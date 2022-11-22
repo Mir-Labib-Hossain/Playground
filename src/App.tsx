@@ -5,7 +5,7 @@ import AnimateNumber from "./pages/animateNumber";
 
 const App = () => {
   const [randomStatus, setRandomStatus] = useState(false);
-  const [value, setValue] = useState(100);
+  const [value, setValue] = useState(123);
 
   const getRandom = () => {
     return Math.random() * (100.55 - 120 + 1) + 100.55;

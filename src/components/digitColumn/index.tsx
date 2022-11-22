@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import usePrev from "../../hooks/usePrev";
 import "./style.css";
@@ -23,17 +22,20 @@ function DigitColumn({ digit, status }: Props) {
 
   useEffect(() => {
     setAnimationStatus(prevDigit !== digit ? status : "");
-  }, [digit,status]);
+    setTimeout(() => {
+      setAnimationStatus("");
+    }, 400);
+  }, [digit, status]);
 
   return (
     <div className="ticker-column-container" ref={columnContainerRef}>
-      <motion.div animate={{ y: position }} className={`ticker-column ${animationStatus}`}>
+      <div style={{ bottom: `-${position}px` }} className={`ticker-column ${animationStatus}`}>
         {[9, 8, 7, 6, 5, 4, 3, 2, 1, 0].map((number, index) => (
           <div className="ticker-digit" key={index}>
             <span>{number}</span>
           </div>
         ))}
-      </motion.div>
+      </div>
       <span className="number-placeholder">{digit}</span>
     </div>
   );
