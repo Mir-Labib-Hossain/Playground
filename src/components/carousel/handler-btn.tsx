@@ -5,7 +5,7 @@ type Props = {
 
 
 function HandlerBtn({ position }: Props) {
-  return <button className="handler-btn">{position === "left" ? "<" : ">"}adfsdf</button>;
+  return <button className="handler-btn">{position === "left" ? "<" : ">"}</button>;
 }
 
 export default HandlerBtn;

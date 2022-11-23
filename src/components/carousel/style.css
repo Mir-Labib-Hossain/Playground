@@ -1,20 +1,23 @@
 .container {
   display: flex;
-  /* overflow: hidden; */
   justify-content: center;
 }
 
 .carousel-list {
-  width: 90%; /* calc 100-margin*/
+  width: 90%; /* calc 100 - margin or 2 button's widths*/
   display: flex;
   flex-grow: 1;
-  transform: translateX(-00%);
+  transform: translateX(-0%);
   transition: transform 1s ease-in-out;
 }
 
-
 /* button */
-.handler-btn{
-opacity: .5;    background-color: red;
-border: none;
+.handler-btn {
+  opacity: 0.5;
+  background-color: red;
+  border: none;
+  border : 2px solid blue;
+  width: 5%; /* width is 90% because there is 5% & 5% 2 buttons = 90+5+5=100 */
+  z-index: 10;
+  /* Customable */
 }

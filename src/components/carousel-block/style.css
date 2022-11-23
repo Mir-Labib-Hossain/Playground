@@ -1,11 +1,16 @@
-.block{
-    
-    flex: 0 0 25%;
-    width: 25%;
-    aspect-ratio: 19/9;
-    margin:2px;
-    display: grid;
-    place-content: center;
-    border : 2px solid red;
+.block {
+  display: flex;
+  padding: 2px;
+  width: 25%;
+  flex: 0 0 25%;
+  /* Customable */
+}
 
+.content {
+  width: 100%;
+  aspect-ratio: 19/9;
+  /* Customable */
+  display: grid;
+  place-content: center;
+  border: 2px solid red;
 }
