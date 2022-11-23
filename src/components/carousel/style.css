@@ -1,12 +1,18 @@
+:root{
+  --side-width:2rem;
+}
 .container {
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 
 .carousel-list {
-  width: 90%; /* calc 100 - margin or 2 button's widths*/
+  --slider-index: 0;
+  --block-to-view:4;
+  width: calc(100% - 2 * var(--side-width) );
   display: flex;
-  flex-grow: 1;
+  transform: translateX( calc( -100% * var(--slider-index) ));
   transform: translateX(-0%);
   transition: transform 1s ease-in-out;
 }
@@ -17,7 +23,22 @@
   background-color: red;
   border: none;
   border : 2px solid blue;
-  width: 5%; /* width is 90% because there is 5% & 5% 2 buttons = 90+5+5=100 */
+  width: var(--side-width); /* container width is 90% because there is 5% & 5% 2 buttons = 90+5+5=100 */
   z-index: 10;
+  cursor: pointer;
+  transition: .5s;
+  /* display: none; */
   /* Customable */
+}
+.handler-btn:hover,
+.handler-btn:focus{
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.handler-btn:disabled,
+.handler-btn[disabled]{
+  border: 2px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
 }
