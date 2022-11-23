@@ -22,12 +22,14 @@ const App = () => {
   }, [randomStatus]);
 
   return (
-    <>
+    <div className="app">
       <AnimateNumber value={value} />
-      <button onClick={() => setValue((prev) => prev + getRandom())}>+</button>
-      <button onClick={() => setValue((prev) => prev - getRandom())}>-</button>
-      <button onClick={() => setRandomStatus(!randomStatus)}>Random {randomStatus?"Off":"Start"}</button>
-    </>
+      <div className="buttons">
+        <button onClick={() => setValue((prev) => prev + getRandom())}>+</button>
+        <button onClick={() => setValue((prev) => prev - getRandom())}>-</button>
+        <button onClick={() => setRandomStatus(!randomStatus)}>Random {randomStatus ? "Off" : "Start"}</button>
+      </div>
+    </div>
   );
 };
 

@@ -23,11 +23,14 @@ function AnimateNumber({ value }: Props) {
   }
 
   return (
+    <div className="ticker-container">
+      $
     <div className="ticker-view">
       {numArr.map((num, index) => (num === "." ? 
         <DecimalColumn key={index} /> :
         <DigitColumn key={index} digit={num} status={status} />
        ))}
+    </div>
     </div>
   );
 }
