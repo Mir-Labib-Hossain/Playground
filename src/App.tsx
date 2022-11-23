@@ -1,7 +1,9 @@
+import Carousel from "./components/carousel";
+
 type Props = {};
 
 const App = (props: Props) => {
-  return <div>App</div>;
+  return <Carousel />;
 };
 
 export default App;
