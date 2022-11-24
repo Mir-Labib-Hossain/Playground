@@ -1,40 +1,68 @@
-:root{
-  --side-width:2rem;
+:root {
+  --side-width: 2rem;
+}
+.container{
+  display: flex;
+  flex-direction: column;
 }
 
-.container {
+.carousel-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+
+}
+
+.pagination-container{
+  display: flex;
+  gap: 5px;
+}
+
+.pagination{
+  width: 20px;
+  height: 5px;
+  background-color: gray;
+}
+
+.pagination-active{
+  width: 20px;
+  height: 5px;
+  background-color: white;
+}
+
+.carousel-body {
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  border : 2px solid red;
 }
 
 .carousel-list {
-  width: calc(100% - 2 * var(--side-width) );
+  width: calc(100% - 2 * var(--side-width));
+  
   display: flex;
   /* --slider-index: 0;
   transform: translateX( calc( -100% * var(--slider-index) )); */
   transform: translateX(-0%);
-  transition: transform .5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 /* button */
 .handler-btn {
-  opacity: 0.5;
   border: 2px solid #999999;
-  background-color: #cccccc;
-  color: #666666;
+  background-color: black;
+  color: white;
   width: var(--side-width); /* container width is 90% because there is 5% & 5% 2 buttons = 90+5+5=100 */
-  height: var(--side-width);;
+  height: var(--side-width);
   z-index: 10;
   cursor: pointer;
-  transition: .5s;
+  transition: 0.5s;
   border-radius: 5px;
-  /* display: none; */
   /* Customizeble */
 }
-.handler-btn:hover{
+
+.handler-btn:hover {
   opacity: 1;
-  transform: scale(1.2);
+  /* transform: scale(1.2); */
 }

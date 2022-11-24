@@ -1,13 +1,24 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-*, *:before, *:after {
-    box-sizing: border-box;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
-.app{
-    background: black;
-    padding: 100px;
+.app {
+  background: black;
+  padding: 100px;
+  min-height: 100vh;
+}
+
+@media (max-width: 850px) {
+  .app {
+    padding: 100px 10px;
+  }
 }

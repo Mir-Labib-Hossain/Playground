@@ -5,7 +5,6 @@
   /* Customizeble */
 }
 
-
 /* @media (max-width: 1570px) {
   .block {
     flex: 0 0 25%;
@@ -28,11 +27,25 @@
 } */
 
 .content {
-  background-color: white;
   width: 100%;
   height: 150px;
   /* Customizeble */
   display: grid;
   place-content: center;
-  border: 2px solid gray;
+  
+  display: flex;
+}
+
+.left {
+  padding: 15px;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.right {
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  flex: 1;
 }
