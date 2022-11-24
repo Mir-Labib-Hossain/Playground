@@ -1,18 +1,19 @@
 :root{
   --side-width:2rem;
 }
+
 .container {
   display: flex;
   justify-content: center;
   overflow: hidden;
+  border : 2px solid red;
 }
 
 .carousel-list {
-  --slider-index: 0;
-  
   width: calc(100% - 2 * var(--side-width) );
   display: flex;
-  transform: translateX( calc( -100% * var(--slider-index) ));
+  /* --slider-index: 0;
+  transform: translateX( calc( -100% * var(--slider-index) )); */
   transform: translateX(-0%);
   transition: transform .5s ease-in-out;
 }
@@ -20,9 +21,9 @@
 /* button */
 .handler-btn {
   opacity: 0.5;
-  background-color: red;
-  border: none;
-  border : 2px solid blue;
+  border: 2px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
   width: var(--side-width); /* container width is 90% because there is 5% & 5% 2 buttons = 90+5+5=100 */
   z-index: 10;
   cursor: pointer;
@@ -30,15 +31,7 @@
   /* display: none; */
   /* Customable */
 }
-.handler-btn:hover,
-.handler-btn:focus{
+.handler-btn:hover{
   opacity: 1;
   transform: scale(1.2);
-}
-
-.handler-btn:disabled,
-.handler-btn[disabled]{
-  border: 2px solid #999999;
-  background-color: #cccccc;
-  color: #666666;
 }

@@ -1,13 +1,11 @@
 type Props = {
   position: String;
   handleView: any;
-  disabled: boolean;
 };
-// import "./style.css";
 
-function HandlerBtn({ position, handleView, disabled }: Props) {
+function HandlerBtn({ position, handleView }: Props) {
   return (
-    <button className="handler-btn" onClick={() => handleView(position)} disabled={disabled}>
+    <button className="handler-btn" onClick={() => handleView(position)}>
       {position === "left" ? "<" : ">"}
     </button>
   );
