@@ -5,6 +5,7 @@
 .container {
   display: flex;
   justify-content: center;
+  align-items: center;
   overflow: hidden;
   border : 2px solid red;
 }
@@ -25,9 +26,11 @@
   background-color: #cccccc;
   color: #666666;
   width: var(--side-width); /* container width is 90% because there is 5% & 5% 2 buttons = 90+5+5=100 */
+  height: var(--side-width);;
   z-index: 10;
   cursor: pointer;
   transition: .5s;
+  border-radius: 5px;
   /* display: none; */
   /* Customable */
 }

@@ -15,14 +15,14 @@ const getWindowDimensions = () => {
 
 const Carousel = (props: Props) => {
   const [currentView, setCurrentView] = useState(0);
-  const [limit, setLimit] = useState(5); // = 20% width
+  const [limit, setLimit] = useState(5); // width = 20%
   const carouselArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
 
   const updateLimit = () => {
     const { width } = getWindowDimensions();
-    if (width < 850) setLimit(2); // = 50% width
-    else if (width < 1100) setLimit(3); // = 33% width
-    else if (width < 1570) setLimit(4); // = 25% width
+    if (width < 850) setLimit(2); // width = 50%
+    else if (width < 1100) setLimit(3); // width = 33%
+    else if (width < 1570) setLimit(4); // width = 25%
     else setLimit(5);
   };
 
@@ -36,21 +36,31 @@ const Carousel = (props: Props) => {
   }, []);
 
   const handleView = (status: string) => {
+    const lastSlider = carouselArr.length / limit - 1;
     if (status === "left") {
-      if (currentView === 0) setCurrentView((prevState) => prevState - 1);
-      setCurrentView((prevState) => prevState - 1);
-    } else setCurrentView((prevState) => prevState + 1);
+      if (currentView === 0) {
+        setCurrentView(lastSlider);
+      } else {
+        setCurrentView((prevState) => prevState - 1);
+      }
+    } else {
+      if (currentView === lastSlider) {
+        setCurrentView(0);
+      } else {
+        setCurrentView((prevState) => prevState + 1);
+      }
+    }
   };
 
   return (
     <div className="container">
-      <HandlerBtn position="left" handleView={handleView} />
+      <HandlerBtn handleView={() => handleView("left")}>&#10096;</HandlerBtn>
       <div className="carousel-list" style={{ transform: `translateX(calc(${currentView}*-100%))` }}>
         {carouselArr.map((title) => (
           <CarouselBlock key={title} title={title} limit={limit} />
         ))}
       </div>
-      <HandlerBtn position="right" handleView={handleView} />
+      <HandlerBtn handleView={() => handleView("right")}>&#10097;</HandlerBtn>
     </div>
   );
 };

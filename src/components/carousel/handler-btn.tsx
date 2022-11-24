@@ -1,12 +1,12 @@
 type Props = {
-  position: String;
-  handleView: any;
+  children: React.ReactNode;
+   handleView: any;
 };
 
-function HandlerBtn({ position, handleView }: Props) {
+function HandlerBtn({ children, handleView }: Props) {
   return (
-    <button className="handler-btn" onClick={() => handleView(position)}>
-      {position === "left" ? "<" : ">"}
+    <button className="handler-btn" onClick={handleView}>
+      {children}
     </button>
   );
 }
