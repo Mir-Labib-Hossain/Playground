@@ -1,8 +1,9 @@
 .block {
+  --block-per-screen:4;
   display: flex;
   padding: 2px;
-  width: 25%;
-  flex: 0 0 25%;
+  width: var(--block-per-screen);
+  flex: 0 0 calc(100% / var(--block-per-screen));
   /* Customable */
 }
 

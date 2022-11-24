@@ -5,11 +5,11 @@ type Props = {
 };
 
 const CarouselBlock = ({ title }: Props) => {
-  return <div className="block">
-    <div className="content">
-    CarouselBlock {title}
+  return (
+    <div className="block">
+      <div className="content">CarouselBlock {title}</div>
     </div>
-  </div>;
+  );
 };
 
 export default CarouselBlock;

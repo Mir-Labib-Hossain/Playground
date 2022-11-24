@@ -9,12 +9,12 @@
 
 .carousel-list {
   --slider-index: 0;
-  --block-to-view:4;
+  
   width: calc(100% - 2 * var(--side-width) );
   display: flex;
   transform: translateX( calc( -100% * var(--slider-index) ));
   transform: translateX(-0%);
-  transition: transform 1s ease-in-out;
+  transition: transform .5s ease-in-out;
 }
 
 /* button */

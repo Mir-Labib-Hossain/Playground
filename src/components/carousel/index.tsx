@@ -13,6 +13,7 @@ const Carousel = (props: Props) => {
     if (status === "left") setCurrentView((prevState) => prevState - 1);
     else setCurrentView((prevState) => prevState + 1);
   };
+  
   console.log(currentView !== 0, currentView, 0);
   console.log(currentView !== Math.floor(carouselArr.length / limit), currentView, Math.floor(carouselArr.length / limit));
 
