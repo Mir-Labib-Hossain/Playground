@@ -12,4 +12,12 @@
           
 <img  src="https://github.com/Mir-Labib-Hossain/Playground/blob/master/src/assets/screenshots/webpack-lodash.png" alt="responsive" width="100%" height="auto" />
 <hr>
+
+### Branch : robinhood-animation
+
           
+### Branch : robinhood-carousel
+It is a slider with 2 left right button & status bar, which is responsive on resize, onResize i have use debounce
+Difficult was : to clean up my ```debounce(onResize)``` function inside useEfect
+
+### Branch : robinhood-carousel-scrollable
