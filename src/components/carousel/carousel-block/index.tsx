@@ -1,20 +1,18 @@
 import "./style.css";
-import farmer from "../../../assets/Farmer-bro.svg";
+
 type Props = {
-  limit: number;
-  data: { text: number | string; bgColor: string; image:string };
+  data: { id: number; text: number | string; bgColor: string; image: string };
 };
 
-const CarouselBlock = ({ data, limit }: Props) => {
-  const { text, bgColor,image } = data;
-  const width = 100 / limit + "%";
+const CarouselBlock = ({ data }: Props) => {
+  const { id, text, bgColor, image } = data;
 
   return (
-    <div className="block" style={{ flexBasis: width }}>
+    <div className="block">
       <div className="content" style={{ backgroundColor: bgColor }}>
-        <div className="left" >
+        <div className="left">
           <h1>&#10004;</h1>
-          {text}
+          {id} - {text}
         </div>
         <div className="right" style={{ backgroundImage: `url(${image})` }}></div>
       </div>
