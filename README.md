@@ -12,4 +12,29 @@
           
 <img  src="https://github.com/Mir-Labib-Hossain/Playground/blob/master/src/assets/screenshots/webpack-lodash.png" alt="responsive" width="100%" height="auto" />
 <hr>
+
+### Branch : webpack
+          
+<img  src="https://github.com/Mir-Labib-Hossain/Playground/blob/master/src/assets/screenshots/webpack-lodash.png" alt="responsive" width="100%" height="auto" />
+<hr>
+          
+### Branch : robinhood-animation
+          
+<img  src="https://github.com/Mir-Labib-Hossain/Playground/blob/master/src/assets/screenshots/robinhood-animation.png" alt="responsive" width="100%" height="auto" />
+<hr>
+
+
+### Branch : robinhood-carousel
+          
+<img  src="https://github.com/Mir-Labib-Hossain/Playground/blob/master/src/assets/screenshots/robinhood-carousel-1.png" alt="responsive" width="100%" height="auto" />
+Small screen :
+<img  src="https://github.com/Mir-Labib-Hossain/Playground/blob/master/src/assets/screenshots/robinhood-carousel-2.png" alt="responsive" width="100%" height="auto" />
+Feature: on button click, each card will slide each time. Not just slides to first & last, like robinhood-carousel-scralable
+Diffficult was: to use debounce function inside useEffect, for onResize(), to update limit of card based on screen size
+<hr>
+          
+
+### Branch : robinhood-carousel-scrollable
+          
+<img  src="https://github.com/Mir-Labib-Hossain/Playground/blob/master/src/assets/screenshots/robinhood-carousel-scrollable.png" alt="responsive" width="100%" height="auto" />
           
