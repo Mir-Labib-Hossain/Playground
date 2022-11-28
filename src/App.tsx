@@ -1,7 +1,7 @@
-type Props = {};
+import Abbreviate from "./Components/numberToKMBT";
 
-const App = (props: Props) => {
-  return <div>App</div>;
+const App = () => {
+  return <Abbreviate />;
 };
 
 export default App;
