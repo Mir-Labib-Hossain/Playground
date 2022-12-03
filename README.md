@@ -1,8 +1,10 @@
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
 
 # :toolbox:  Tech Stack
-![React](https://img.shields.io/badge/react-#20232a.svg?style=for-the-badge&logo=react&logoColor=#61DAFB) ![Vite](https://img.shields.io/badge/vite-#646CFF.svg?style=for-the-badge&logo=vite&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-#007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)![MUI](https://img.shields.io/badge/MUI-#0081CB.svg?style=for-the-badge&logo=mui&logoColor=white)
-
-
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 
 ### Branch : robinhood-carousel
 ![](https://i.imgur.com/waxVImv.png)            
