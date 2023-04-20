@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { memo, useEffect, useRef, useState } from "react";
 import usePrev from "../../hooks/usePrev";
 import "./style.css";
 
@@ -15,6 +15,7 @@ function DigitColumn({ digit, status }: Props) {
   const setColumnToNumber = (number: string) => {
     setPosition(columnContainerRef.current.clientHeight * parseInt(number));
   };
+  console.log("digit");
 
   useEffect(() => {
     setColumnToNumber(digit);
@@ -41,4 +42,4 @@ function DigitColumn({ digit, status }: Props) {
   );
 }
 
-export default DigitColumn;
+export default memo(DigitColumn);

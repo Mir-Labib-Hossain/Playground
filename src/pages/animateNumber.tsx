@@ -13,24 +13,18 @@ const formatForDisplay = (num: number = 0) => {
 
 function AnimateNumber({ value }: Props) {
   const numArr = formatForDisplay(value);
-  const prevValue = usePrev(value) 
-  
-  let status:string = ""
-  if(prevValue!==undefined){
-    if(value<prevValue) status="decrease"
-    else if (value>prevValue) status="increase"
-    
+  const prevValue = usePrev(value);
+
+  let status: string = "";
+  if (prevValue !== undefined) {
+    if (value < prevValue) status = "decrease";
+    else if (value > prevValue) status = "increase";
   }
+  console.log("page");
 
   return (
     <div className="ticker-container">
-      $
-    <div className="ticker-view">
-      {numArr.map((num, index) => (num === "." ? 
-        <DecimalColumn key={index} /> :
-        <DigitColumn key={index} digit={num} status={status} />
-       ))}
-    </div>
+      $<div className="ticker-view">{numArr.map((num, index) => (num === "." ? <DecimalColumn key={index} /> : <DigitColumn key={index} digit={num} status={status} />))}</div>
     </div>
   );
 }

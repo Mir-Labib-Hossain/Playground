@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { memo } from 'react'
 
 type Props = {}
 
 const DecimalColumn = (props: Props) => {
+  console.log("decimal");
   return (
     <div>
       <span>.</span>
@@ -10,4 +11,4 @@ const DecimalColumn = (props: Props) => {
   )
 }
 
-export default DecimalColumn
+export default memo(DecimalColumn)

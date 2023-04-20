@@ -25,7 +25,7 @@ const App = () => {
     <div className="app">
       <AnimateNumber value={value} />
       <div className="buttons">
-        <button onClick={() => setValue((prev) => prev + getRandom())}>+</button>
+        <button onClick={() => setValue((prev) => prev + 1000)}>+</button>
         <button onClick={() => setValue((prev) => prev - getRandom())}>-</button>
         <button onClick={() => setRandomStatus(!randomStatus)}>Random {randomStatus ? "Off" : "Start"}</button>
       </div>
